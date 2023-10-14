@@ -31,26 +31,27 @@ nav .logo {
     width: 20%;
 }
 
-nav .menue {
+nav .menu {
     width: 50%;
+    font-size: 1.2rem;
 }
 
-nav .menue ul {
+nav .menu ul {
     list-style: none;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
 }
 
-nav .menue li {
+nav .menu li {
     display: inline-block;
     height: 100%;
     padding: 5px;
 }
 
-nav .menue li a {
+nav .menu li a {
     text-decoration: none;
     color: rgb(34, 26, 26);
     transition: .7s;
@@ -61,24 +62,60 @@ nav .menue li a {
     width: fit-content
 }
 
-nav .menue li a::before {
+nav .menu li a::before {
     content: "";
-    height: 0;
-    transform: scale(0, 0);
+    transform: scaleY(0);
     top: 0;
     left: 0;
     position: absolute;
     border-width: 0 1.5px;
     border-style: solid;
     width: 100%;
-    transition: .7s;
-    z-index: 6;
+    transition: .3s;
+    z-index: 1;
     display: inline-block;
 }
-
-nav .menue li a:hover::before {
-    transform: scale(1, 1);
-    height: 100%
+nav .menu li a::after {
+    content: "";
+    height:100%;
+    transform: scaleX(0);
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-width: 1.5px 0;
+    border-style: solid;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+    z-index: 1;
+    display: inline-block;
+    transform-origin: 0% 0%;
 }
 
-nav .menue li:hover::before {}
+nav .menu li a:hover::before {
+    transform: scaleY(1);
+    height: 100%;
+}
+nav .menu li a:hover::after {
+    transform: scaleX(1);
+    width: 100%
+}
+
+nav .user-data {
+    font-size: 1.3rem;
+}
+nav .user-data .cart {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size:0.8rem
+}
+nav .user-data .items-no {
+    display: inline-block;
+width: 20px;
+height: 26px;
+text-align: center;
+background-color: black;
+color: whitesmoke;
+border-radius: 50%;
+font-size: 1rem;
+line-height: 26px;
+}
