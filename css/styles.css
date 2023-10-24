@@ -507,6 +507,7 @@ hr {
 .partners .card {
     width: 27%;
     height: 400px;
+    margin-top:30px;
     overflow: hidden;
 }
 
@@ -556,7 +557,6 @@ hr {
 
 .partners .card .images .icons-container i {
     color: #cbcbcb;
-    ;
     font-size: 1.8rem;
     margin: 0 4px;
     cursor: pointer;
